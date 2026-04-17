@@ -27,9 +27,9 @@
     <style>
         /* ===== ROOT VARIABLES ===== */
         :root {
-            --primary: #4F46E5;
-            --primary-dark: #3730A3;
-            --primary-light: #818CF8;
+            --primary: #ec30ed;
+            --primary-dark: #5B21B6;
+            --primary-light: #A78BFA;
             --primary-lighter: #E0E7FF;
             --accent: #F59E0B;
             --accent-light: #FCD34D;
@@ -41,7 +41,7 @@
             --warning-light: #FEF3C7;
             --info: #3B82F6;
             --info-light: #DBEAFE;
-            --dark: #1E1B4B;
+            --dark: #c10fb4;
             --gray-900: #111827;
             --gray-700: #374151;
             --gray-600: #4B5563;
