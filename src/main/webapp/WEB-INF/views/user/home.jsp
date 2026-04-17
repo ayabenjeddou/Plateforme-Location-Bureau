@@ -507,7 +507,7 @@
     <div class="welcome-section">
         <div class="welcome-content">
             <h1>Bienvenue, <span>${userSession.nomComplet}</span> 👋</h1>
-            <p>Recherchez un créneau disponible et réservez votre salle et bureaux en quelques clics</p>
+            <p>Trouvez un créneau disponible et réservez votre local en quelques clics</p>
         </div>
         <div class="quick-actions">
             <a href="${pageContext.request.contextPath}/user/reservations" class="btn-action btn-outline-custom">
@@ -529,8 +529,8 @@
             <i class="fas fa-search"></i>
         </div>
         <div>
-            <h2>Rechercher une Biens</h2>
-            <p>Sélectionnez vos critères pour trouver la salle idéale</p>
+            <h2>Rechercher une local</h2>
+            <p>Sélectionnez vos critères pour trouver votre local idéale</p>
         </div>
     </div>
 
@@ -582,7 +582,7 @@
             </button>
             <button type="submit" class="btn-search">
                 <i class="fas fa-search"></i>
-                Rechercher les Biens
+                Rechercher les locals
             </button>
         </div>
     </form>
@@ -604,14 +604,14 @@
                 <i class="fas fa-search"></i>
             </div>
             <h3>Commencez votre recherche</h3>
-            <p>Veuillez sélectionner une date et un créneau horaire pour voir les Biens disponibles</p>
+            <p>Veuillez sélectionner une date et un créneau horaire pour voir les locals disponibles</p>
         </div>
     </c:when>
     <c:otherwise>
         <!-- Results Header -->
         <div class="results-header">
             <div class="results-title">
-                <h2>Biens disponibles</h2>
+                <h2>locals disponibles</h2>
                 <c:if test="${not empty Biens}">
                     <span class="results-count">${Biens.size()} résultat(s)</span>
                 </c:if>
@@ -633,8 +633,8 @@
                 <div class="empty-state-icon">
                     <i class="fas fa-door-closed"></i>
                 </div>
-                <h3>Aucune Biens disponible</h3>
-                <p>Aucune Biens ne correspond à vos critères pour ce créneau. Essayez de modifier vos filtres.</p>
+                <h3>Aucune local disponible</h3>
+                <p>Aucune local ne correspond à vos critères pour ce créneau. Essayez de modifier vos filtres.</p>
             </div>
         </c:if>
 
@@ -679,7 +679,7 @@
                                 <input type="hidden" name="endTime" value="${endTime}" />
                                 <button type="submit" class="btn-reserve">
                                     <i class="fas fa-calendar-plus"></i>
-                                    Réserver cette salle
+                                    Réserver cette local
                                 </button>
                             </form>
                         </div>
