@@ -1,5 +1,6 @@
 package dao;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import model.Bien;
 
@@ -14,4 +15,9 @@ public interface BienDao {
     void delete(Bien bien);
 
 	List<Bien> findDisponibles();
+
+	static List<Bien> findAvailable(LocalDateTime debut, LocalDateTime fin, Integer capaciteMin, String equipements) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
