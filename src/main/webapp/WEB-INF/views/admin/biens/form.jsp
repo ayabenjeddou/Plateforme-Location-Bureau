@@ -312,18 +312,38 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="localisation">
-                            <i class="fas fa-map-marker-alt"></i>
-                            Localisation <span class="required">*</span>
+                        <label for="prixParHeure">
+                            <i class="fas fa-money-bill-wave"></i>
+                            Prix par heure (TND) <span class="required">*</span>
                         </label>
-                        <input type="text" 
-                               id="localisation" 
-                               name="localisation"
+                        <input type="number" 
+                               id="prixParHeure" 
+                               name="prixParHeure"
                                class="form-input"
-                               value="${bien.localisation}"
-                               placeholder="Ex: Bâtiment A, 2ème étage"
+                               value="${bien.prixParHeure}"
+                               min="0"
+                               step="0.1"
+                               placeholder="Ex: 15.5"
                                required />
+                        <p class="help-text">
+                            <i class="fas fa-info-circle"></i>
+                            Tarif horaire de l'espace
+                        </p>
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="localisation">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Localisation <span class="required">*</span>
+                    </label>
+                    <input type="text" 
+                           id="localisation" 
+                           name="localisation"
+                           class="form-input"
+                           value="${bien.localisation}"
+                           placeholder="Ex: Bâtiment A, 2ème étage"
+                           required />
                 </div>
                                 <div class="form-group">
                     <label for="equipements">

@@ -141,6 +141,10 @@ public class UserReservationServlet extends HttpServlet {
         r.setDateHeureFin(fin);
         r.setDateCreation(LocalDateTime.now());
         r.setStatut(StatutReservation.EN_ATTENTE);
+        
+        long minutes = Duration.between(debut, fin).toMinutes();
+        double heures = minutes / 60.0;
+        r.setMontantTotal(heures * bien.getPrixParHeure());
 
         reservationDao.save(r);
 
@@ -201,6 +205,10 @@ public class UserReservationServlet extends HttpServlet {
         r.setDateHeureFin(fin);
         r.setDateCreation(LocalDateTime.now());
         r.setStatut(StatutReservation.EN_ATTENTE);
+        
+        long minutes = Duration.between(debut, fin).toMinutes();
+        double heures = minutes / 60.0;
+        r.setMontantTotal(heures * bien.getPrixParHeure());
 
         reservationDao.save(r);
 

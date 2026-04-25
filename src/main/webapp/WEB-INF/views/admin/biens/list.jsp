@@ -343,6 +343,10 @@
                                 <i class="fas fa-users"></i>
                                 <span>Capacité: ${s.capacite} personnes</span>
                             </div>
+                            <div class="room-info-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Prix: ${s.prixParHeure} TND / heure</span>
+                            </div>
                         </div>
                         <c:if test="${not empty s.equipements}">
                             <div class="equipment-tags">

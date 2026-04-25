@@ -91,9 +91,11 @@ public class AdminBienServlet extends HttpServlet {
         String equipements = request.getParameter("equipements");
         String description = request.getParameter("description");
         String activeStr = request.getParameter("active");
+        String prixStr = request.getParameter("prixParHeure");
 
         String error = null;
         int capacite = 0;
+        double prixParHeure = 0.0;
 
         if (nom == null || nom.trim().isEmpty()) {
             error = "Nom obligatoire";
@@ -103,6 +105,14 @@ public class AdminBienServlet extends HttpServlet {
                 if (capacite <= 0) error = "Capacité invalide";
             } catch (Exception e) {
                 error = "Capacité doit être un nombre";
+            }
+            try {
+                if (prixStr != null && !prixStr.trim().isEmpty()) {
+                    prixParHeure = Double.parseDouble(prixStr);
+                    if (prixParHeure < 0) error = "Le prix ne peut pas être négatif";
+                }
+            } catch (Exception e) {
+                error = "Le prix doit être un nombre valide";
             }
         }
 
@@ -122,6 +132,7 @@ public class AdminBienServlet extends HttpServlet {
         bien.setEquipements(equipements);
         bien.setDescription(description);
         bien.setActive(activeStr != null);
+        bien.setPrixParHeure(prixParHeure);
 
         // Upload de l'image
         Part part = request.getPart("image");

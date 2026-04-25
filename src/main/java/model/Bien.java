@@ -95,10 +95,16 @@ public class Bien {
         this.active = active;
     }
 
-	public long getPrixParHeure() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @Column(name = "prix_par_heure")
+    private Double prixParHeure;
+
+    public Double getPrixParHeure() {
+        return prixParHeure == null ? 0.0 : prixParHeure;
+    }
+
+    public void setPrixParHeure(Double prixParHeure) {
+        this.prixParHeure = prixParHeure;
+    }
 
 	public String getCategorie() {
 		return categorie;
